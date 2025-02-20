@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+/* Animasi Loading */
+.loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s, visibility 0.5s;
+    z-index: 9999; /* Pastikan di atas elemen lain */
+}
+
+.loading-text {
+    font-size: 2.5rem;
+    color: #00bfff;
+    animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+    0% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000
+    ; /* Pastikan header bisa diklik */
+}
+
+/* Logo */
+.logo {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Animasi Hamburger Menu */
+.hamburger {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.hamburger:hover {
+    transform: scale(1.1);
+}
+/* Animasi Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Styling Section Layanan */
+.services {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #0f0f0f, #121b42);
+    color: white;
+}
+
+.services h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #00bcd4;
+}
+
+/* Grid Layout */
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Styling Box Layanan */
+.service-box {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 188, 212, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 188, 212, 0.5);
+}
+
+.service-box h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #00bcd4;
+}
+
+.service-box p {
+    font-size: 1em;
+    opacity: 0.8;
+}
+/* Section Kontak */
+.contact {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #0f0f0f, #121b42);
+    color: white;
+}
+
+.contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #00bcd4;
+    letter-spacing: 2px;
+}
+
+.contact p {
+    font-size: 1.2em;
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+/* Styling Info Kontak */
+.contact-info {
+    max-width: 600px;
+    margin: auto;
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 188, 212, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-info:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 188, 212, 0.5);
+}
+
+/* Link Hover */
+.contact-info a {
+    color: #00bcd4;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #008ba3;
+    text-decoration: underline;
+}
+
+/* Styling Ikon */
+.contact-info img {
+    width: 20px;
+    vertical-align: middle;
+    margin-right: 10px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.contact-info img:hover {
+    opacity: 1;
+}
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #0f0f0f, #121b42);
+    color: white;
+}
+
+.hero-content h2 {
+    font-size: 2.5em;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.hero-content span {
+    color: #00bcd4;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #00bcd4;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    background: #008ba3;
+    box-shadow: 0 0 10px #00bcd4;
+}
+
+/* Animasi Ketik Otomatis */
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+#typing-text {
+    display: inline-block;
+    border-right: 2px solid white;
+    padding-right: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    max-width: 250px;
+    animation: blink 0.8s step-end infinite;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #0f0f0f;
+    color: white;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.social-media img {
+    width: 30px;
+    margin: 0 10px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.social-media img:hover {
+    opacity: 1;
+}
+
+/* Navigation */
+nav {
+    transition: 0.3s ease-in-out;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #111;
+        display: none;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        padding: 10px;
+    }
+
+    nav.show {
+        display: flex;
+    }
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url('assets/background.jpg') no-repeat center/cover;
+    text-shadow: 0 0 10px rgba(0, 0, 255, 0.8);
+    padding: 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+}
+
+.hero p {
+    margin: 15px 0;
+    font-size: 1.2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background: #00bfff;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #0080ff;
+}
+
+/* Animasi Scroll */
+section {
+    padding: 100px 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.8s ease-in-out;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background: #111;
+}
